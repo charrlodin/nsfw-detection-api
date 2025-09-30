@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+.env
+*.pyc
+
+# Logs
+*.log
+server.log
+server.pid
+
+# Model files (downloaded at runtime)
+models/*
+!models/.gitkeep
+
+# Data
+data/*
+!data/.gitkeep
+
+# System
+.DS_Store
+Thumbs.db
+
+# Test files
+test_*.py
+*_test.py
+comprehensive_test.py
+test_images/
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+test.csv
+test.json
+*_results.csv
+*.test.*
+
+# Internal documentation
+docs/
+
+# Development scripts
+run.sh
+deploy.sh
+test.sh
+download_model.sh
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Training artifacts
+checkpoints/
+logs/
+tensorboard/
