@@ -521,8 +521,8 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ## 📞 Support
 
 - 📧 **Issues:** [GitHub Issues](https://github.com/charrlodin/nsfw-detection-api/issues)
-- 📚 **Docs:** [API Documentation](https://your-api.onrender.com/docs)
-- 💬 **RapidAPI:** [Support Page]() *(coming soon)*
+- 📚 **Docs:** [API Documentation](https://nsfw-detection-api.onrender.com/docs) *(after deployment)*
+- 💬 **RapidAPI:** [Support Page](https://rapidapi.com/) *(coming soon)*
 
 **Response Times:**
 - Critical bugs: <4 hours

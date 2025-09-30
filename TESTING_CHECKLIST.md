@@ -9,7 +9,7 @@ You cannot launch without testing. The code is ready, but unvalidated.
 ## Step 1: Setup Local Environment (10 minutes)
 
 ```bash
-cd /Users/arronchild/Projects/nsfw-detection-api
+cd nsfw-detection-api
 
 # Create virtual environment
 python3 -m venv venv

@@ -389,7 +389,7 @@ For detailed training information, see: [Falconsai/nsfw_image_detection on Huggi
 
 **For API support:**
 - GitHub: https://github.com/charrlodin/nsfw-detection-api
-- Email: [Via GitHub profile]
+- Documentation: See README.md
 
 ---
 
