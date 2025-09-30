@@ -25,7 +25,7 @@ class NSFWDetector:
         self.labels = None
         
     def load_model(self):
-        """Load the NSFW detection model"""
+        """Load the NSFW detection model with memory optimization"""
         logger.info(f"Loading model: {config.MODEL_NAME}")
         
         try:
@@ -33,10 +33,13 @@ class NSFWDetector:
             self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
             logger.info(f"Using device: {self.device}")
             
-            # Load model and feature extractor
+            # Load model with memory optimization
+            logger.info("Loading with low memory mode...")
             self.model = AutoModelForImageClassification.from_pretrained(
                 config.MODEL_NAME,
-                cache_dir=str(config.MODEL_DIR)
+                cache_dir=str(config.MODEL_DIR),
+                low_cpu_mem_usage=True,
+                torch_dtype=torch.float32
             )
             self.feature_extractor = AutoFeatureExtractor.from_pretrained(
                 config.MODEL_NAME,
@@ -50,6 +53,12 @@ class NSFWDetector:
             # Get label mappings
             self.labels = self.model.config.id2label
             logger.info(f"Model loaded successfully. Labels: {self.labels}")
+            
+            # Force garbage collection to free memory
+            import gc
+            gc.collect()
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
             
         except Exception as e:
             logger.error(f"Failed to load model: {e}")
